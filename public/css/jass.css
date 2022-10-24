@@ -1081,14 +1081,14 @@
   }
   
   .card {
-    border: 1px solid #1a1a1a;
+    border: 1px solid #C49799;
     margin-bottom: 1rem;
   }
   
   .card .card-header {
     padding: 0.375rem;
-    background-color: #2d3e50;
-    color: #d9e9e8;
+    background-color: #C49799;
+    color: #BFB6BB;
   }
   
   .card .card-body {
@@ -1096,7 +1096,7 @@
   }
   
   .card .card-footer {
-    border-top: 1px solid #1a1a1a;
+    border-top: 1px solid #C49799;
     padding: 0.375rem;
   }
   
@@ -1142,11 +1142,11 @@
   form .form-input {
     width: 100%;
     padding: 0.75rem;
-    color: #1a1a1a;
-    background-color: #ffffff;
+    color: #36393B;
+    background-color: #BFB6BB;
     margin: 0.625rem 0;
     font-size: 1.2rem;
-    border: 1px solid #484848;
+    border: 1px solid #C49799;
     border-radius: 0.3rem;
   }
   

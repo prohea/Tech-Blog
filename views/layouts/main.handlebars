@@ -13,16 +13,18 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
+        <a href="/">Tech-Blog</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/prof">dashboard</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/" class="navbar-item" id="footer-home">Homepage</a>
+        <a href="/dashboard" id="footer-home">Dashboard</a> |
+        <a href="/dashboard/create/" class="navbar-item" id="footer-home">Create Post</a>
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/" class="navbar-item" id="footer-home">Homepage</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
@@ -30,8 +32,22 @@
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer>
-      
+    <footer class="footer" id="footer-display">
+      <div class="">
+        <p>
+          <a href="/" id="footer-home">Homepage</a> {{#if logged_in}} |
+          <a href="/dashboard" id="footer-home">Dashboard</a> |
+          <a href="/dashboard/create/" class="navbar-item" id="footer-home">Create Post</a> 
+          {{else}}
+          | <a href="/login" id="footer-home">Login</a>
+          {{if}}
+        </p>
+      </div>
+      <div class="" id="footer-display-bottom">
+        <p>
+          <strong id="footer-home">My Tech</strong>by <a href="https://www.github.com/prohea" id="footer-home"></a>
+        </p>
+      </div>
     </footer>
   </div>
 

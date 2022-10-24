@@ -41,3 +41,6 @@ router.get('/', withAuth, (req,res) => {
         res.status(500).json(err);
     });
 });l
+
+//To post one data with id
+router

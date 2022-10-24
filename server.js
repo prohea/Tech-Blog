@@ -1,13 +1,20 @@
+//To get the path to stylesheet
 const path = require('path');
 const express = require('express');
+//Import express session
 const session = require('express-session');
+//Setting up express=handlebars template engine
 const exphbs = require('express-handlebars');
+//Routes files will work as controller
 const routes = require('./controllers');
+//Import helpers
 const helpers = require('./utils/helpers');
 
+//Import sequelize connection
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+//Declaring app to use express and the local host
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -22,7 +29,8 @@ const sess = {
     secure: false,
     sameSite: 'strict',
   },
-  resave: false,
+  resave: true,
+  rolling: true, 
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
@@ -41,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+//Sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

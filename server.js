@@ -34,7 +34,7 @@ const sess = {
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
-  })
+  }),
 };
 
 app.use(session(sess));
@@ -51,5 +51,5 @@ app.use(routes);
 
 //Sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 });

@@ -40,7 +40,7 @@ router.get('/', withAuth, (req,res) => {
         console.log(err);
         res.status(500).json(err);
     });
-});l
+});
 
 //To post one data with id
 router.get('/edit/:id', withAuth, (req, res) => {

@@ -1,24 +1,28 @@
 <div class="card mb-6">
-    <header class="card-header card-header-title">
-        <div class="column">
-            <p class="">
-        <a href="/post/{{id}}">{{title}}</a>
-            </p>
-        </div>
+	<header class="card-header card-header-title">
+		<div class="column">
+			<p class="">
+				<a href="/post/{{id}}">{{title}}</a>
+			</p>
+		</div>
 
-        <div class="column">
-            <span class=""></span>
-        </div>
-    </header>
+		<div class="column">
+			<span class=""></span>
+		</div>
+	</header>
 
-<div class="card-content">
-    <div class="">
-        {{post_content}}
-    </div>
-    <div class="">
-        <b>{{user.username}}</b> |
-        {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-    </div>
-</div>
+	<div class="card-content">
+		<div class="">
+			{{post_content}}
+		</div>
+		<div class="">
+			<b>{{user.username}}</b>
+			|
+			{{format_date created_at}}
+			|
+			<a href="/post/{{id}}">{{comments.length}}
+				{{format_plural "comment" comments.length}}</a>
+		</div>
+	</div>
 
 </div>

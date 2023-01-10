@@ -49,7 +49,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 Node.js
 
 ## Deployed Project
-
+https://github.com/prohea/Techhy-Blog
 
 # Screenshot
 ![TechBlog]()
